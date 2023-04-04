@@ -5,6 +5,32 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<script>
+		window.onload = function() {
+			var audio = new Audio('src/wav/music.wav');
+			audio.loop = true;
+			audio.play();
+		}
+
+		function changeTextColor() {
+			const colors = [
+				"red", "green", "blue", "yellow", "purple", "orange",
+				"brown", "grey", "black", "white", "pink", "teal",
+				"maroon", "navy", "olive", "lime", "aqua", "silver",
+				"fuchsia", "coral", "violet", "indigo", "tan", "gold",
+				"beige", "turquoise", "lavender", "salmon", "sienna", "plum",
+				"crimson", "khaki", "orchid", "thistle", "peru", "navajowhite",
+				"burlywood", "mistyrose", "steelblue", "palegreen", "mediumslateblue", "indianred",
+				"darkseagreen", "mediumvioletred", "midnightblue", "darkorchid", "firebrick", "darkslategray"
+			]; // tableau de cinquante couleurs disponibles
+			const randomIndex = Math.floor(Math.random() * colors.length); // choix aléatoire d'une couleur
+			const randomColor = colors[randomIndex]; // récupération de la couleur choisie
+			document.body.style.color = randomColor; // changement de la couleur du texte de la page
+		}
+
+		setInterval(changeTextColor, 75); // appel de la fonction toutes les secondes pour changer la couleur du texte
+
+	</script>
 	<style>
 		body{
 			height: 97vh;
