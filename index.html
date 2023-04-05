@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script>
+	<!-- <script>
 		window.onload = function() {
 			var audio = new Audio('src/wav/music.wav');
 			audio.loop = true;
@@ -30,7 +30,7 @@
 
 		setInterval(changeTextColor, 75); // appel de la fonction toutes les secondes pour changer la couleur du texte
 
-	</script>
+	</script> -->
 	<style>
 		body{
 			height: 97vh;
@@ -41,18 +41,38 @@
 			gap: 25px;
 			font-family: Arial, Helvetica, sans-serif;
 		}
+		h1{
+			color: white;
+			font-weight: bolder;
+		}
 		a{
 			font-size: xx-large;
+			color: #1684ac;
+			border: black 1px solid;
+			background: white;
+			border-radius: 10px;
+			padding: 10px;
+			text-decoration: none;
+			font-weight: bolder;
+		}
+		img{
+			width: 40%;
 		}
 	</style>
+	<link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-	<img src="src/server-icon.png" alt="">
-	<h1>Page Admin</h1>
+	<div>
+	   <div class="wave"></div>
+	   <div class="wave"></div>
+	   <div class="wave"></div>
+	</div>
+	<!-- <h1>Page Admin</h1>
 	<a href="http://212.227.29.168:23333">MCSManager Panel</a>
-	<a href="https://brave-driscoll.212-227-29-168.plesk.page:8443/login_up.php?success_redirect_url=%2Fsmb%2Fweb%2Fview">Plesk</a>
-	<h1>Page Web</h1>
-	<a href="https://bastienbories.androcode.fr">Portfolio | Bastien Bories</a>
-	<a href="https://killianperrichet.androcode.fr/">Portfolio | Killian Perrichet</a>
+	<a href="https://brave-driscoll.212-227-29-168.plesk.page:8443/login_up.php?success_redirect_url=%2Fsmb%2Fweb%2Fview">Plesk</a> -->
+	<img src="src/svg/Androcode-logo.svg" alt="">
+	<h1>Site des développeurs</h1>
+	<a href="https://bastienbories.androcode.fr">Bastien Bories</a>
+	<a href="https://killianperrichet.androcode.fr/">Killian Perrichet</a>
 </body>
 </html>
