@@ -45,7 +45,7 @@
 			color: white;
 			font-weight: bolder;
 		}
-		a{
+		a, .stopGamepoo{
 			font-size: xx-large;
 			color: #1684ac;
 			border: black 1px solid;
@@ -58,7 +58,41 @@
 		img{
 			width: 40%;
 		}
+		.content{
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+		.gamepoo{
+			height: 10px;
+		}
+		.stopGamepoo{
+			position: fixed;
+			bottom: 20px;
+			cursor: pointer;
+			color: red;
+		}
+		.hidden{
+			visibility: hidden;
+		}
 	</style>
+	<script>
+		var audio = new Audio('src/mp3/NintendoGamepooIntro.mp3');
+		audio.loop = true;
+		function start(){
+			audio.play();
+			
+			var stopGamepoo = document.getElementById('stopGamepoo');
+			stopGamepoo.classList.remove('hidden')
+		}
+		function stop(){
+			audio.pause();
+			audio.currentTime = 0;
+
+			var stopGamepoo = document.getElementById('stopGamepoo');
+			stopGamepoo.classList.add('hidden')
+		}
+	</script>
 	<link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
@@ -72,7 +106,11 @@
 	<a href="https://brave-driscoll.212-227-29-168.plesk.page:8443/login_up.php?success_redirect_url=%2Fsmb%2Fweb%2Fview">Plesk</a> -->
 	<img src="src/svg/Androcode-logo.svg" alt="">
 	<h1>Site des développeurs</h1>
-	<a href="https://bastienbories.androcode.fr">Bastien Bories</a>
-	<a href="https://killianperrichet.androcode.fr/">Killian Perrichet</a>
+	<div class="content">
+		<a href="https://bastienbories.androcode.fr">Bastien Bories</a>
+		<div class="gamepoo" onclick="start()"></div>
+		<a href="https://killianperrichet.androcode.fr/">Killian Perrichet</a>
+		<div class="stopGamepoo hidden" id="stopGamepoo" onclick="stop()">Stop</div>
+	</div>
 </body>
 </html>
